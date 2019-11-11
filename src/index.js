@@ -1,4 +1,9 @@
+let str = require('./a.js')
+document.getElementById('app').innerText = str;
+import './index.css';
 
-let result=require('./a.js');
-require('./index.css');
-console.log(result);
+
+// 热更替
+if (module.hot) {
+    module.hot.accept();
+}
